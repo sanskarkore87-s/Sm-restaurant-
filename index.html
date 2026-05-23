@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SM Restaurant | Fine Dining & Luxury Cuisine</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="brand-text glow">SM</h1>
+            <p>A Symphony of Flavors</p>
+        </div>
+    </div>
+
+    <header class="navbar" id="navbar">
+        <div class="logo">SM <span class="logo-text">Restaurant</span></div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">Our Story</a>
+            <a href="#menu">The Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-btn" id="closeMenuBtn"><i class="fas fa-times"></i></button>
+        <a href="#home" class="mob-link">Home</a>
+        <a href="#about" class="mob-link">Our Story</a>
+        <a href="#menu" class="mob-link">The Menu</a>
+        <a href="#gallery" class="mob-link">Gallery</a>
+        <a href="#contact" class="mob-link">Contact</a>
+    </div>
+
+    <button id="cartButton" class="cart-button">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+    </button>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2 class="brand-text gold-text">Your Cart</h2>
+            <button id="closeCartBtn" class="close-cart">✕</button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="customer-details-box">
+                <h4 class="box-title">Order Details</h4>
+                <input type="text" id="customerName" placeholder="Your Name..." class="premium-input mb-10">
+                
+                <div class="order-type-selector mb-10">
+                    <label class="radio-label">
+                        <input type="radio" name="orderType" value="Dine-In" checked> Dine-In
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="orderType" value="Takeaway"> Takeaway
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="orderType" value="Home Delivery"> Delivery
+                    </label>
+                </div>
+
+                <textarea id="deliveryAddress" class="premium-input hidden" placeholder="Enter Full Delivery Address..." rows="2"></textarea>
+            </div>
+
+            <div class="cart-total">
+                <span>Total Bill</span>
+                <strong id="cartTotal" class="gold-text">₹0</strong>
+            </div>
+            <button id="whatsappCheckoutBtn" class="btn btn-gold w-100">ORDER ON WHATSAPP</button>
+        </div>
+    </aside>
+
+    <main class="main-wrapper">
+        <section id="home" class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content" data-aos="zoom-in" data-aos-duration="1500">
+                <h4 class="subtitle">PUNE'S FINEST DINING</h4>
+                <h1 class="main-title">A Taste of <span class="gold-text">Luxury</span></h1>
+                <p class="hero-desc">Authentic Chinese, Premium Tandoor & Royal Biryani</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-gold">ORDER NOW</a>
+                    <a href="#about" class="btn btn-outline">OUR STORY</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-grid">
+                <div class="about-text" data-aos="fade-up">
+                    <h4 class="section-subtitle">OUR STORY</h4>
+                    <h2 class="section-title">A Legacy of Culinary <span class="gold-text">Excellence</span></h2>
+                    <p>SM Restaurant was created with a passion for authentic flavors, luxury dining, and unforgettable experiences. We bring together the finest spices, royal heritage recipes, and modern culinary art to craft dishes that speak to the soul.</p>
+                </div>
+                <div class="about-image" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Luxury Dining">
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="text-center" data-aos="fade-up">
+                    <h4 class="section-subtitle">THE MENU</h4>
+                    <h2 class="section-title">Culinary <span class="gold-text">Masterpieces</span></h2>
+                </div>
+                
+                <div id="categorySlider" class="category-slider"></div>
+
+                <div id="menu-container" class="menu-grid"></div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container text-center" data-aos="fade-up">
+                <h4 class="section-subtitle">AMBIENCE & FOOD</h4>
+                <h2 class="section-title">The <span class="gold-text">Gallery</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gal-img" data-aos="zoom-in" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="gal-img" data-aos="zoom-in" style="background-image: url('https://images.unsplash.com/photo-1544025162-81111420d4d7?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="gal-img" data-aos="zoom-in" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="gal-img" data-aos="zoom-in" style="background-image: url('https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80');"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2 class="brand-text glow">SM</h2>
+            <p>Experience the Pinnacle of Fine Dining</p>
+            <p class="copyright">© 2026 SM Restaurant. Crafted with luxury.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
